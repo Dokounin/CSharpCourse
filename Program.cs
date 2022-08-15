@@ -4,8 +4,87 @@ class Program
 {
     static void Main(string[] args)
     {
-      
+      string nameConcat = string.Concat("My ", "name ", "is ", "John");
+      System.Console.WriteLine(nameConcat);
+
+      nameConcat = string.Join(" ", "My","name", "is", "John");
+      System.Console.WriteLine(nameConcat);
+
+      nameConcat = nameConcat.Insert(0, "By the way,");
+      System.Console.WriteLine(nameConcat);
+
+      nameConcat = nameConcat.Remove(0, 1);
+      System.Console.WriteLine(nameConcat);
+
+      string replaced = nameConcat.Replace('n', 'z');
+      System.Console.WriteLine(replaced);
     }   
+    static void StringEmptiness()
+    {
+      string str = string.Empty; // same as "";
+
+      string empty = "";
+      string withSpaced = " ";
+      string notEmpty = " b";
+      string nullString = null;
+
+      System.Console.WriteLine("IsNullOrEmpty");
+      bool isNullOrEmpty = string.IsNullOrEmpty(nullString);
+      System.Console.WriteLine(isNullOrEmpty);
+
+      isNullOrEmpty = string.IsNullOrEmpty(withSpaced);
+      System.Console.WriteLine(isNullOrEmpty);
+
+      isNullOrEmpty = string.IsNullOrEmpty(notEmpty);
+      System.Console.WriteLine(isNullOrEmpty);
+
+      isNullOrEmpty = string.IsNullOrEmpty(empty);
+      System.Console.WriteLine(isNullOrEmpty);
+
+      System.Console.WriteLine();
+      System.Console.WriteLine("IsNullOrWithSpace");
+
+      bool isNullOrWithSpace = string.IsNullOrWhiteSpace(nullString);
+      System.Console.WriteLine(isNullOrWithSpace);
+
+      isNullOrWithSpace = string.IsNullOrWhiteSpace(withSpaced);
+      System.Console.WriteLine(isNullOrWithSpace);
+
+      isNullOrWithSpace = string.IsNullOrWhiteSpace(notEmpty);
+      System.Console.WriteLine(isNullOrWithSpace);
+
+      isNullOrWithSpace = string.IsNullOrWhiteSpace(empty);
+      System.Console.WriteLine(isNullOrWithSpace);
+    }
+    static void QueryingStrings()
+    {
+      string name = "abracadabra";
+      bool containA = name.Contains('a');
+      bool containE = name.Contains('E');
+
+      System.Console.WriteLine(containA);
+      System.Console.WriteLine(containE);
+
+      bool endWithAbra = name.EndsWith("abra");
+      System.Console.WriteLine(endWithAbra);
+
+      bool startWithAbra = name.StartsWith("abra");
+      System.Console.WriteLine(startWithAbra);
+
+      int indexOfA = name.IndexOf('a', 1);
+      System.Console.WriteLine(indexOfA);
+
+      int lastIndexOfR = name.LastIndexOf('r');
+      System.Console.WriteLine(lastIndexOfR);
+
+      System.Console.WriteLine(name.Length);
+
+      string substrFrom5 = name.Substring(5);
+      System.Console.WriteLine(substrFrom5);
+
+      string substrFromTo = name.Substring(0, 3);
+      System.Console.WriteLine(substrFromTo);
+    }
     static void StaticAndInstanceMembers()
     {
       string name = "abracadabra";
