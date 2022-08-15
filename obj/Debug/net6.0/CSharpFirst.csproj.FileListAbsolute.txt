@@ -1,0 +1,15 @@
+/home/dokounin/projects/CSharpCourse/CSharpFirst/bin/Debug/net6.0/CSharpFirst
+/home/dokounin/projects/CSharpCourse/CSharpFirst/bin/Debug/net6.0/CSharpFirst.deps.json
+/home/dokounin/projects/CSharpCourse/CSharpFirst/bin/Debug/net6.0/CSharpFirst.runtimeconfig.json
+/home/dokounin/projects/CSharpCourse/CSharpFirst/bin/Debug/net6.0/CSharpFirst.dll
+/home/dokounin/projects/CSharpCourse/CSharpFirst/bin/Debug/net6.0/CSharpFirst.pdb
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.csproj.AssemblyReference.cache
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.GeneratedMSBuildEditorConfig.editorconfig
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.AssemblyInfoInputs.cache
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.AssemblyInfo.cs
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.csproj.CoreCompileInputs.cache
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.dll
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/refint/CSharpFirst.dll
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.pdb
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/CSharpFirst.genruntimeconfig.cache
+/home/dokounin/projects/CSharpCourse/CSharpFirst/obj/Debug/net6.0/ref/CSharpFirst.dll
