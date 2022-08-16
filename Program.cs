@@ -1,8 +1,112 @@
-﻿namespace CSharpFirst
+﻿using System.Text;
+
+namespace CSharpFirst
 {
 class Program
 {
     static void Main(string[] args)
+    {
+        
+    }   
+    static void ConsoleBasics()
+    {
+        // System.Console.WriteLine("Hi, please tell me your name");
+
+        // string name = Console.ReadLine();
+        // string sentence = $"Your name is {name}";
+        // System.Console.WriteLine(sentence);
+
+        System.Console.WriteLine("Hi, please tell me your age.");
+
+        string input = Console.ReadLine();
+        int age = int.Parse(input);
+
+        string sentence = $"Your age is {age}";
+        System.Console.WriteLine(sentence);
+
+        Console.Clear();
+        Console.BackgroundColor = ConsoleColor.Cyan;
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+        Console.Write("New Style ");
+        Console.Write("New Style\n");
+    }
+    static void ComparingsStrings()
+    {
+        string str1 = "abcde";
+        string str2 = "abcde";
+
+        bool areEqual = str1 == str2;
+        System.Console.WriteLine(areEqual);
+
+        areEqual = string.Equals(str1,str2, StringComparison.Ordinal);
+        System.Console.WriteLine(areEqual);
+    }
+    static void StringFormat()
+    {
+        string name = "John";
+        int age = 30;
+
+        string str1 = string.Format("My name is {0} and I'm {1}", name, age);
+        System.Console.WriteLine(str1);
+
+        string str2 = $"My name is {name} and I'm {age}";
+        System.Console.WriteLine(str2);
+
+        string str3 = "My name is \nJohn";
+        System.Console.WriteLine(str3);
+
+        str3 = $"My name is {Environment.NewLine}John";
+        System.Console.WriteLine(str3);
+
+        string str4 = "I'm \t30";
+        System.Console.WriteLine(str4);
+
+        // string str5 = "I'm John and I'm "good" programmer";
+        string str5 = "I'm John and I'm \"good\" programmer";
+        System.Console.WriteLine(str5);
+
+        // string str6 = "C:\\tmp\\test_file.txt";
+        string str6 = @"C:\tmp\test_file.txt";
+        System.Console.WriteLine(str6);
+
+        double answer = 42.08;
+
+        // string result = string.Format("{0:d}", answer);
+        // string result2 = string.Format("{0:d4}", answer);
+
+        string result = string.Format("{0:f}", answer);
+        string result2 = string.Format("{0:f4}", answer);
+
+        System.Console.WriteLine(result);
+        System.Console.WriteLine(result2);
+        
+        Console.OutputEncoding = Encoding.UTF8;
+
+        double money = 12.8;
+
+        result = string.Format("{0:C}", money);
+        result2 = string.Format("{0:C2}", money);
+
+        result = $"{money:C2}";
+
+        System.Console.WriteLine(result);
+        System.Console.WriteLine(result2);
+    }
+    static void StringBuilderDemo()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("My ");
+        sb.Append("name ");
+        sb.Append("is ");
+        sb.Append("Jonh");
+        sb.AppendLine("!");
+        sb.AppendLine("Hello!");
+
+        string str = sb.ToString();
+        System.Console.WriteLine(str);
+    }
+    static void StringModification()
     {
       string nameConcat = string.Concat("My ", "name ", "is ", "John");
       System.Console.WriteLine(nameConcat);
@@ -18,7 +122,26 @@ class Program
 
       string replaced = nameConcat.Replace('n', 'z');
       System.Console.WriteLine(replaced);
-    }   
+
+      string data = "28;35;64;12;37";
+      string[] dataSplit = data.Split(";");
+      string firstElement = dataSplit[0];
+      System.Console.WriteLine(firstElement);
+
+      char[] chars = nameConcat.ToCharArray();
+      System.Console.WriteLine(chars[0]);
+      System.Console.WriteLine(nameConcat[0]);
+
+      string lower = nameConcat.ToLower();
+      System.Console.WriteLine(lower);
+
+      string upper = nameConcat.ToUpper();
+      System.Console.WriteLine(upper);
+
+      string john = " My name is John ";
+      System.Console.WriteLine(john);
+      System.Console.WriteLine(john.Trim());
+    }
     static void StringEmptiness()
     {
       string str = string.Empty; // same as "";
