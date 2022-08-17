@@ -6,8 +6,167 @@ class Program
 {
     static void Main(string[] args)
     {
+
+    }
+    static void Homework03()
+    {
+        System.Console.WriteLine("Enter your data to calculate your body mass index");
+        System.Console.WriteLine("Enter your Lastname :");
+        string lastName = Console.ReadLine();
+
+        System.Console.WriteLine("Enter your FirstName :");
+        string firstName = Console.ReadLine();
+
+        System.Console.WriteLine("Enter your age :");
+        int age = int.Parse(Console.ReadLine());
+
+        System.Console.WriteLine("Enter your weight :");
+        double weight = double.Parse(Console.ReadLine());
+
+        System.Console.WriteLine("Enter your height in metres:");
+        double height = double.Parse(Console.ReadLine());
+
+        double bodyMassIndex = weight / (height * height);
+
+        System.Console.WriteLine($"Your profile:\nFull name: {lastName} {firstName}\nAge: {age}\nWeight:{weight}\nHeight: {height}\nBody Mass Index: {bodyMassIndex}");        
+    }
+    static void Homework02()
+    {
+        System.Console.WriteLine("Enter the first side  of the triangle AB :");
+        double ab = double.Parse(Console.ReadLine());
+        System.Console.WriteLine("Enter the seconde side of the triangle BC : ");
+        double bc = double.Parse(Console.ReadLine());
+        System.Console.WriteLine("Enter the third side of the triangle AC :");
+        double ac = double.Parse(Console.ReadLine());
+
+        double p = (ab + bc + ac) / 2;
+
+        double square = p * (p - ab) * (p - bc) * (p - ac);
+
+        double result = Math.Sqrt(square);
+
+        System.Console.WriteLine($"The square of your triangle is {result} ");
+    }
+    static void Homework01()
+    {
+        System.Console.WriteLine("Hey, tell me please your name");
+        string name = Console.ReadLine();
+        System.Console.WriteLine($"Hello {name}");
+
+        System.Console.WriteLine("Please enter numbers");
+        int number1 = int.Parse(Console.ReadLine());
+        System.Console.WriteLine("Please enter numbers two");
+        int number2 = int.Parse(Console.ReadLine());
+        //  number1 = number2;
+        //  number2 = number1 + number2;
+        int number3 = number1;
+        number1 = number2;
+        number2 = number3;
+        System.Console.WriteLine($"It's number one : {number1}, I'ts number two : {number2} ");
+
+        System.Console.WriteLine("Please enter number");
+        int number = int.Parse(Console.ReadLine());
+        int numberQuantity = number.ToString().Length;
+        System.Console.WriteLine($"Your number : {number}, Your number has {numberQuantity} digits");
         
+    }
+    static void DateTimeDemo()
+    {
+        DateTime now = DateTime.Now;
+        System.Console.WriteLine(now.ToString());
+
+        System.Console.WriteLine($"It's {now.Date}, {now.Hour} : {now.Minute}");
+
+        DateTime dt = new DateTime(2016, 2, 28);
+        DateTime newDt = dt.AddDays(1);
+        System.Console.WriteLine(newDt);
+
+        TimeSpan ts = now - dt;
+        // ts = now.Subtract(dt);
+        System.Console.WriteLine(ts.Days);
+    }
+    static void IntroToArrays()
+    {
+        int[] a1;
+        a1 = new int[10];
+
+        int[] a2 = new int[5];
+        int[] a3 = new int[5] {1, 3, -2, 4, 5};
+
+       
+
+        int[] a4 = {1, 3, 2, 4, 10};
+
+        System.Console.WriteLine(a4[0]);
+
+        int number = a4[4];
+        System.Console.WriteLine(number);
+
+        a4[4] = 6;
+        System.Console.WriteLine(a4[4]); 
+
+        System.Console.WriteLine(a4.Length);
+        System.Console.WriteLine(a4[a4.Length - 1]);
+
+        string s1 = "abcdefgh";
+        char first = s1[0];
+        char last = s1[s1.Length - 1];
+
+        System.Console.WriteLine($"First : {first}  Last : {last}");
+
+        // impossible
+        // s1[0] = "s";
+         foreach (var item in a4)
+        {
+            System.Console.WriteLine(item);
+        }
+
+    }
+    static void MathDemo()
+    {
+        System.Console.WriteLine(Math.Pow(2,3));
+        System.Console.WriteLine(Math.Sqrt(9));
+        System.Console.WriteLine(Math.Sqrt(8));
+
+        System.Console.WriteLine();
+
+        System.Console.WriteLine(Math.Round(1.7));
+        System.Console.WriteLine(Math.Round(1.4));
+
+        System.Console.WriteLine();
+
+        System.Console.WriteLine(Math.Round(2.5));
+        System.Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
+        System.Console.WriteLine(Math.Round(2.5, MidpointRounding.ToEven));
     }   
+    static void CastingAndParsing()
+    {
+        byte b = 3; // 0000 0011
+        int i = b; // 0000 0000 0000 0000 0000 0000 0000 0011
+        long j = i;// 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0011
+
+        float f = i; // 3.0
+
+        b = (byte)i;
+
+        i = (int)f;
+
+        f = 3.1f;
+        i = (int)f;
+        System.Console.WriteLine(i);
+
+        string str = "1";
+        // i = int(str);
+        i = int.Parse(str);
+        System.Console.WriteLine(i);
+
+        int x = 5;
+        int result = x / 2;
+        System.Console.WriteLine(result);
+
+        double result2 = (double)x / 2;
+        System.Console.WriteLine(result2);
+    }
     static void ConsoleBasics()
     {
         // System.Console.WriteLine("Hi, please tell me your name");
@@ -149,7 +308,7 @@ class Program
       string empty = "";
       string withSpaced = " ";
       string notEmpty = " b";
-      string nullString = null;
+      string? nullString = null;
 
       System.Console.WriteLine("IsNullOrEmpty");
       bool isNullOrEmpty = string.IsNullOrEmpty(nullString);
